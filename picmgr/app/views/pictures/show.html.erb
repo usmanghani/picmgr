@@ -1,0 +1,10 @@
+<%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @picture.picture.url %>
+<%= image_tag @picture.picture.url(:medium) %>
+<%= image_tag @picture.picture.url(:thumb) %>
+
+<%= link_to 'Edit', edit_picture_path(@picture) %> |
+<%= link_to 'Back', pictures_path %>
