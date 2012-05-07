@@ -1,17 +1,17 @@
 development:
-  bucket_name: appname_development
-  access_key_id: 
-  secret_access_key: 
-  distribution_domain: XXXX.cloudfront.net
+  bucket_name: picmgr.development
+  access_key_id: AKIAIKLXXGBKZTZMZXTA
+  secret_access_key: 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
+  # distribution_domain: XXXX.cloudfront.net
 
 test:
-  bucket_name: appname_test
-  access_key_id: 
-  secret_access_key: 
-  distribution_domain: XXXX.cloudfront.net
+  bucket_name: picmgr.test
+  access_key_id: AKIAIKLXXGBKZTZMZXTA
+  secret_access_key: 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
+  # distribution_domain: XXXX.cloudfront.net
 
 production:
-  bucket_name: appname
-  access_key_id: 
-  secret_access_key: 
-  distribution_domain: XXXX.cloudfront.net
+  bucket_name: picmgr
+  access_key_id: AKIAIKLXXGBKZTZMZXTA
+  secret_access_key: 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
+  # distribution_domain: XXXX.cloudfront.net
