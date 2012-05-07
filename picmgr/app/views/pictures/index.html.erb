@@ -2,23 +2,19 @@
 
 <h1>Listing pictures</h1>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
 <% @pictures.each do |picture| %>
-  <tr>
-    <td><%= image_tag picture.picture.url(:thumb) %></td>
-    <td><%= link_to 'Show', picture %></td>
-    <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
-    <td><%= link_to 'Destroy', picture, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+    <div class="pic" style="float:left">
+        <%= link_to(image_tag(picture.picture.url(:thumb)), picture) %>
+        <br/>
+        <!-- <%= link_to 'Show', picture %> -->
+        <%= link_to 'Edit', edit_picture_path(picture) %>
+        <%= link_to 'Destroy', picture, confirm: 'Are you sure?', method: :delete %>
+    </div>
 <% end %>
-</table>
 
-<br />
+<div style="clear:both">
+    <br />
 
-<%= link_to 'New Picture', new_picture_path %>
+    <%= link_to 'New Picture', new_picture_path %>
+</div>

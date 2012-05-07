@@ -11,7 +11,7 @@
     </div>
   <% end %>
   <%= f.label :picture %> <br/>
-  <% if @picture %>
+  <% unless f.object.nil? || f.object.new_record? %>
 	<%= image_tag @picture.picture.url(:thumb) %>
   <% end %>
   <%= f.file_field :picture %>

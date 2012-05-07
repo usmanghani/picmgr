@@ -2,9 +2,12 @@
 
 <p id="notice"><%= notice %></p>
 
-<%= image_tag @picture.picture.url %>
+<%= link_to 'View All', pictures_path %><br />
 <%= image_tag @picture.picture.url(:medium) %>
 <%= image_tag @picture.picture.url(:thumb) %>
-
 <%= link_to 'Edit', edit_picture_path(@picture) %> |
 <%= link_to 'Back', pictures_path %>
+<br/>
+<%= label_tag @picture.picture, 'Original:' %>
+<%= image_tag @picture.picture.url %>
+

@@ -220,4 +220,10 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
+  if Rails.env.development? || Rail.env.test?
+    OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+  end
+  
+  require 'omniauth-facebook'
+  config.omniauth :facebook,  "228113350588765", "4b9c01aa280fb81d91a64f339fffe63b", :client_options => {:ssl => {:ca_path =>"#{Rails.root}/config/ca-bundle.crt"}}
 end
